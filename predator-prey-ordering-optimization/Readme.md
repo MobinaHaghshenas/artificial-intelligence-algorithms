@@ -72,23 +72,34 @@ The scripts report the fitness count, percentage, whether all constraints are sa
 
 ## Running the Scripts
 
-The current versions set `INPUT_FILE = "/content/input.txt"`, which is suitable for an environment such as Google Colab when the file is available at that path.
+Both scripts now locate `input.txt` automatically from the same directory as the Python script, using `pathlib.Path`. No hard-coded Google Colab path or manual path edit is required.
 
-Run each script separately in that environment:
+The relevant line in both scripts is:
+
+```python
+from pathlib import Path
+
+INPUT_FILE = Path(__file__).resolve().with_name("input.txt")
+```
+
+Keep `input.txt` in the same directory as the scripts:
+
+```text
+predator-prey-ordering-optimization/
+├── input.txt
+├── genetic_algorithm.py
+├── simulated_annealing.py
+└── Readme.md
+```
+
+Run each algorithm separately from this directory:
 
 ```bash
 python genetic_algorithm.py
 python simulated_annealing.py
 ```
 
-For running locally from this project directory, change the `INPUT_FILE` assignment in **both** scripts to:
-
-```python
-from pathlib import Path
-INPUT_FILE = Path(__file__).with_name("input.txt")
-```
-
-Then run the commands from the project directory.
+The scripts use only Python's standard library, so no third-party packages need to be installed.
 
 ## Observed Results
 
