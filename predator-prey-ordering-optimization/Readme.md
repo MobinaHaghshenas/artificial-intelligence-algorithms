@@ -65,32 +65,9 @@ Fitness = satisfied edge constraints / total edge constraints
 
 The scripts report the fitness count, percentage, whether all constraints are satisfied, and whether the result is a valid permutation. A valid permutation contains every vertex exactly once; it does not necessarily satisfy every graph edge.
 
-## Requirements
-
-- Python 3.8 or newer
-- No third-party packages are required by the current scripts; they use Python's standard library.
 
 ## Running the Scripts
 
-Both scripts now locate `input.txt` automatically from the same directory as the Python script, using `pathlib.Path`. No hard-coded Google Colab path or manual path edit is required.
-
-The relevant line in both scripts is:
-
-```python
-from pathlib import Path
-
-INPUT_FILE = Path(__file__).resolve().with_name("input.txt")
-```
-
-Keep `input.txt` in the same directory as the scripts:
-
-```text
-predator-prey-ordering-optimization/
-├── input.txt
-├── genetic_algorithm.py
-├── simulated_annealing.py
-└── Readme.md
-```
 
 Run each algorithm separately from this directory:
 
@@ -113,10 +90,6 @@ In the reported runs on the provided input, both algorithms obtained a score of 
 | All edge constraints satisfied | No | No |
 | Generations / iterations reported | 500 generations | 11,485 iterations |
 
-These are the results reported for the current parameter settings and runs; they are not a statistical benchmark. Both algorithms achieved the same score in these runs, so these results alone do not establish that one method is better. A stronger comparison would repeat each algorithm across multiple random seeds and record best/mean fitness and runtime.
+These are the results reported for the current parameter settings and runs.
 
-## Limitations
 
-- The edge interpretation assumes that the first vertex in each pair must precede the second. Confirm this convention against the original assignment statement if it defines edge direction differently.
-- The algorithms are stochastic optimization methods and are not guaranteed to find a globally optimal ordering.
-- The reported runs did not satisfy all constraints. The fitness score measures the number of satisfied edges, not proof of global optimality.
