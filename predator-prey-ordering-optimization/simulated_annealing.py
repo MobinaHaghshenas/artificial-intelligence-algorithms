@@ -17,7 +17,7 @@ from pathlib import Path
 import math
 import random
 
-INPUT_FILE = "/content/input.txt"
+INPUT_FILE = Path(__file__).resolve().with_name("input.txt")
 
 INITIAL_TEMPERATURE = 10.0
 COOLING_RATE = 0.995
