@@ -16,7 +16,7 @@ Objective:
 from pathlib import Path
 import random
 
-INPUT_FILE =  "/content/input.txt"
+INPUT_FILE = Path(__file__).resolve().with_name("input.txt")
 
 POPULATION_SIZE = 100
 MAX_GENERATIONS = 500
