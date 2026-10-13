@@ -9,19 +9,7 @@ Python implementations of classical Artificial Intelligence search and optimizat
 | [Tic-Tac-Toe AI](./tic-tac-toe-minimax/) | Minimax, Alpha-Beta Pruning | A terminal-based Tic-Tac-Toe game in which the AI evaluates possible moves using adversarial search. |
 | [Predator–Prey Ordering Optimization](./predator-prey-ordering-optimization/) | Genetic Algorithm, Simulated Annealing | Two metaheuristic approaches for finding an ordering of vertices in a directed graph that satisfies as many predator-before-prey constraints as possible. |
 
-## Repository Structure
 
-```text
-artificial-intelligence-algorithms/
-├── tic-tac-toe-minimax/
-│   ├── main.py
-│   └── readme.md
-└── predator-prey-ordering-optimization/
-    ├── genetic_algorithm.py
-    ├── simulated_annealing.py
-    ├── input.txt
-    └── Readme.md
-```
 
 ## Skills Demonstrated
 
